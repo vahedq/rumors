@@ -1,7 +1,7 @@
 # rumors
 
 ## Data
-To obtain a copy of the data, please email me at `vahed[at]umich.edu` and cite this paper when you use it:
+If you use the data, please cite the following paper:
 
 ```
 @InProceedings{qazvinian-EtAl:2011:EMNLP,
