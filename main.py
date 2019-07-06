@@ -6,13 +6,14 @@ from utils import get_train_test_data
 from models.tfidf import NBModel
 from models.tfidf import SGDModel
 from models.dl import SimpleDense
-
+from models.dl import BiLSTM
 
 
 MODELS = {
   'nb': NBModel,
   'sgd': SGDModel,
   'dense': SimpleDense,
+  'bilstm': BiLSTM,
 }
 
   
