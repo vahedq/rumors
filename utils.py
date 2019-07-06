@@ -27,15 +27,15 @@ def create_data_pool(task):
   for tweet in tweets:
     parts = tweet.strip().split('\t')
     text = parts[2]
-    annotation = int(parts[3])
-    if annotation == 2:
+    annotation = parts[3]
+    if int(annotation) == 2:
       # Ignore any tweet where annoator is undetermined.
       continue
     if task == 'detection':
       X.append(text)
-      label = 1 if annotation > 0 else 0
+      label = '1' if int(annotation) > 0 else '0'
       y.append(label)
-    elif task == 'sentiment' and annotation > 0:
+    elif task == 'sentiment' and int(annotation) > 0:
       # Only add tweets that have
       X.append(text)
       # 11 -> if the tweet endorses the rumor
@@ -43,7 +43,7 @@ def create_data_pool(task):
       # 13 -> if the tweet questions the rumor
       # 14 -> if the tweet is neutral
       # Map it to [0-3] classes
-      y.append(annotation-11)
+      y.append(annotation)
   return X, y
 
 
