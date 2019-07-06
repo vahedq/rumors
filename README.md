@@ -78,7 +78,7 @@ neutral         7     5         2        7
 
 
 ## Data
-If you use the data, please cite the following paper:
+You can find the dataset and its readme under `data/`. If you use the data, please cite the following paper:
 
 ```
 @InProceedings{qazvinian-EtAl:2011:EMNLP,
