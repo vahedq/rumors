@@ -1,6 +1,12 @@
 # Rumor has it!
 In 2011, I worked on a project to identify fake news and misinformation on social media ([See this paper for more details](https://www.aclweb.org/anthology/D11-1147)).
 
+## To run
+`python main.py  --task sentiment --method dense`
+
+`task` should be one of `[sentiment/detection]` and method is either of `[nb|sgd|dense|bilstm|all]`
+
+
 ## Data
 If you use the data, please cite the following paper:
 
