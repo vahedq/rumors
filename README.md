@@ -1,5 +1,8 @@
 # rumors
 
+## Data
+To obtain a copy of the data please email me at `vqazvinian [at] gmail [dot] com` 
+
 
 Please cite this paper when you use this data:
 
