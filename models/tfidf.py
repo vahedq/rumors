@@ -6,24 +6,35 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import SGDClassifier
 
-
-def nb_model(X_train, y_train):
-  pipeline = Pipeline([
-    ('vect', CountVectorizer()),
-    ('tfidf', TfidfTransformer()),
-    ('clf', MultinomialNB()),
-  ])
-  pipeline.fit(X_train, y_train)
-  return pipeline
+from models.model import Model
 
 
-def sdg_model(X_train, y_train):
-  pipeline = Pipeline([
-    ('vect', CountVectorizer()),
-    ('tfidf', TfidfTransformer()),
-    ('clf', SGDClassifier(
-      loss='hinge', penalty='l2',
-    )),
-  ])
-  pipeline.fit(X_train, y_train)
-  return pipeline
+class NBModel(Model):
+  '''Naive Bayes model'''
+  def train(self):
+    self.model = Pipeline([
+      ('vect', CountVectorizer()),
+      ('tfidf', TfidfTransformer()),
+      ('clf', MultinomialNB()),
+    ])
+    self.model.fit(self.X_train, self.y_train)
+
+  def test(self):
+    self.y_pred = self.model.predict(self.X_test)
+
+
+class SGDModel(Model):
+  '''Stochastic Gradient Descent.'''
+
+  def train(self):
+    self.model = Pipeline([
+      ('vect', CountVectorizer()),
+      ('tfidf', TfidfTransformer()),
+      ('clf', SGDClassifier(
+        loss='hinge', penalty='l2',
+      )),
+    ])
+    self.model.fit(self.X_train, self.y_train)
+  
+  def test(self):
+    self.y_pred = self.model.predict(self.X_test)

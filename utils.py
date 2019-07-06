@@ -33,7 +33,7 @@ def create_data_pool(task):
       continue
     if task == 'detection':
       X.append(text)
-      label = '1' if int(annotation) > 0 else '0'
+      label = 1 if int(annotation) > 0 else 0
       y.append(label)
     elif task == 'sentiment' and int(annotation) > 0:
       # Only add tweets that have
@@ -43,7 +43,8 @@ def create_data_pool(task):
       # 13 -> if the tweet questions the rumor
       # 14 -> if the tweet is neutral
       # Map it to [0-3] classes
-      y.append(annotation)
+      # Convert to integers 0-3
+      y.append(int(annotation) - 11)
   return X, y
 
 
