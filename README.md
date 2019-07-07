@@ -2,7 +2,7 @@
 In 2011, I worked on a project to identify fake news and misinformation on social media ([See this paper for more details](https://www.aclweb.org/anthology/D11-1147)). This repository contains the dataset built and used in that work as well as some fun additional experiments.
 
 ## To run
-`python main.py  --task sentiment --method dense`
+`python main.py  --task sentiment --method all`
 
 `task` should be one of `[sentiment/detection]` and method is either of `[nb|sgd|dense|bilstm|all]`
 
