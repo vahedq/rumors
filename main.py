@@ -16,7 +16,6 @@ MODELS = {
   'bilstm': BiLSTM,
 }
 
-  
 
 def main(arguments):
 

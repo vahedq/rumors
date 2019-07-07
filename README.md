@@ -74,6 +74,28 @@ endorse       345    37        34        0
 deny           37   332         4        2
 question       43    12        84        0
 neutral         7     5         2        7
+
+
+=========== BiLSTM/Glove ===========
+Classification Report:
+              precision    recall  f1-score   support
+
+     endorse       0.81      0.83      0.82       416
+        deny       0.85      0.91      0.88       375
+    question       0.69      0.55      0.61       139
+     neutral       0.64      0.33      0.44        21
+
+    accuracy                           0.81       951
+   macro avg       0.75      0.66      0.69       951
+weighted avg       0.81      0.81      0.81       951
+
+
+Confusion Matrix:
+          endorse  deny  question  neutral
+endorse       347    38        28        3
+deny           26   342         6        1
+question       48    14        77        0
+neutral         6     7         1        7
 ```
 
 

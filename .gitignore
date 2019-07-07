@@ -31,6 +31,8 @@ MANIFEST
 *.manifest
 *.spec
 
+glove.twitter.27B.100d.txt
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

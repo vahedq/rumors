@@ -1,4 +1,5 @@
 
+import numpy as np
 import pandas as pd
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
@@ -47,6 +48,10 @@ class Model(object):
 
 class NNBaseModel(Model):
   '''Base class for keras data preprocessing.'''
+  def __init__(self, X_train, X_test, y_train, y_test, task='detection'):
+    super(NNBaseModel, self).__init__(X_train, X_test, y_train, y_test, task=task)
+    self.get_word2vec()
+  
   def preprocess_data(self):
     # Max number of words in each tweet.
     self.maxlen = 30
@@ -65,6 +70,24 @@ class NNBaseModel(Model):
       self.X_test, value=self.tk.word_index['<PAD>'],
       padding='post', maxlen=self.maxlen
     )
+
+  def get_word2vec(self):
+    file = open('./data/glove.twitter.27B.100d.txt', 'r')
+    self.word2vec = dict()
+    if (file):
+      self.word2vec = dict()
+      split = file.read().splitlines()
+      for line in split:
+        key = line.split(' ',1)[0]  # the first word is the key.
+        value = np.array([float(val) for val in line.split(' ')[1:]])
+        self.word2vec[key] = value
+    else:
+      print(
+        '''
+          Cannot find glove path.
+          Download from 
+          https://nlp.stanford.edu/projects/glove/
+        ''')
     
   def test(self):
     self.y_pred = self.model.predict(self.X_test).argmax(axis=1)
