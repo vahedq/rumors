@@ -11,7 +11,7 @@ This dataset includes 5 sets of annotated tweets from 5 different stories:
 	
 
 
-Each tweet in each dataset is annotated usign the following guidelines:
+Each tweet in each dataset is annotated usiing the following guidelines:
 
 | label  | description |
 |---|---|
