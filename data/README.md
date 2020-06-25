@@ -1,14 +1,14 @@
 This dataset includes 5 sets of annotated tweets from 5 different stories: 
 
-**airfrance.txt**:	Air France mid-air crash photos?
 
-**michelle.txt**:	Michelle Obama hired too many staff?
-
-**palin.txt**:	palin Sarah Palin getting divorced?
-
-**cell-ids.txt**:	Cell phone numbers going public?
-
-**obama-ids.txt**:	Is Barack Obama muslim? 
+| filenamee  | topic |
+|---|---|
+| **airfrance.txt**  | Air France mid-air crash photos?  | 
+|  **michelle.txt** |  Michelle Obama hired too many staff? |  
+|  **palin.txt** |  Sarah Palin getting divorced?  | 
+|  **cell-ids.txt** |  Cell phone numbers going public?  | 
+|  **obama-ids.txt** |  Is Barack Obama muslim?   | 
+	
 
 
 Each tweet in each dataset is annotated usign the following guidelines:
