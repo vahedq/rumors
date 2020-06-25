@@ -1,7 +1,7 @@
 This dataset includes 5 sets of annotated tweets from 5 different stories: 
 
 
-| filenamee  | topic |
+| dataset  | topic |
 |---|---|
 | **airfrance.txt**  | Air France mid-air crash photos?  | 
 |  **michelle.txt** |  Michelle Obama hired too many staff? |  
